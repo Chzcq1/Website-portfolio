@@ -9,4 +9,4 @@ function closeModal() {
   document.getElementById('imageModal').style.display = 'none';
 }
 
-document.getElementById('closeButton').onclick = closeModal;
+document.getElementById('closeButton').onclick = closeModal;สา

@@ -394,3 +394,25 @@ iframe {
   height: auto; /* ความสูงจะปรับอัตโนมัติตามสัดส่วน */
   aspect-ratio: 16/9; /* กำหนดอัตราส่วน 16:9 */
 }
+
+.view-video-btn {
+  padding: 4px 10px;  /* ลดขนาด padding ลง */
+  font-size: 0.85rem;   /* ลดขนาดฟอนต์ */
+  font-weight: normal; /* เปลี่ยนฟอนต์ให้เบาลง */
+  color: white;
+  background: linear-gradient(135deg, #FFA500, #FF8C00); /* ใช้สีที่นุ่มนวลกว่า */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* ลดความเข้มของเงา */
+}
+
+.view-video-btn:hover {
+  transform: scale(1.03); /* ลดขนาดที่ขยายเมื่อเลื่อนเมาส์ */
+  background-color: #FF8C00; /* เปลี่ยนสีพื้นหลังเมื่อเลื่อนเมาส์ */
+}
+
+.view-video-btn:focus {
+  outline: none; /* ลบเส้นขอบเมื่อมีการคลิก */
+}
