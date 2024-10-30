@@ -1,0 +1,495 @@
+    <!DOCTYPE html> <!--html5-->
+    <html lang="th"> <!--ภาษาไทย-->
+
+    <head> <!--หัวเว็บ-->
+      <meta charset="UTF-8"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--การกำหนดขนาดหน้าจอ-->
+      <title>Portfolio - แนะนำตัวเอง</title>
+      <link rel="stylesheet" href="CSS/styles.css">
+      <!--การเชื่อมต่อไฟล์ css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="CSSbackgroudwelcome/backgroudwelcome.css">
+      <script src="https://kit.fontawesome.com/5cae9cec43.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+      <!-- ส่วนเปิดใช้งานเสียงต้อนรับ -->
+      <audio id="background-sound" src="welcomebackground/welcome.mp3"></audio>
+
+      <script>
+        // Function to play the audio when the page is loaded
+        window.addEventListener('load', function() {
+          var audio = document.getElementById('background-sound');
+          audio.play();
+        });
+      </script>
+      <!-- ส่วนเปิดใช้งานเสียงต้อนรับ -->
+
+      <!-- หน้าจอต้อนรับแบบเต็มจอ -->
+      <div id="welcome-screen">
+        <div class="welcome-content">
+          <h1>ยินดีต้อนรับ!</h1>
+          <p>ขอให้สนุกกับการเยี่ยมชมเว็บไซต์ของฉัน</p>
+        </div>
+      </div>
+
+      <header>
+        <h1>Welcome</h1>
+        <p>วิศวกรรมคอมพิวเตอร์<br>
+          <span class="scrolling-text">Studying engineering is not just about learning for today; it’s equipping ourselves to build the future with our own hands</span>
+        </p>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#" id="about-link" onclick="showSection('about')"><i class="fas fa-user"></i> เกี่ยวกับฉัน</a></li>
+          <li><a href="#" id="skills-link" onclick="showSection('skills')"><i class="fas fa-laptop-code"></i> ทักษะ</a></li>
+          <li><a href="#" id="projects-link" onclick="showSection('projects')"><i class="fas fa-project-diagram"></i> โปรเจค</a></li>
+          <li><a href="#" id="certificates-link" onclick="showSection('certificates')"><i class="fas fa-certificate"></i> เกียรติบัตร</a></li>
+        </ul>
+      </nav>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const navLinks = document.querySelectorAll('nav ul li a');
+
+          navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+              // ลบ class active จากทุกปุ่ม
+              navLinks.forEach(item => item.classList.remove('active'));
+              // เพิ่ม class active ให้กับปุ่มที่ถูกคลิก
+              this.classList.add('active');
+            });
+          });
+        });
+      </script>
+
+      <section id="welcome" class="content"
+        style="display: block; padding: 50px; background-color: #FFF8DC; text-align: center; opacity: 0; transform: translateY(20px); animation: fadeIn 1s forwards;">
+        <h2 style="color: #FF8C00; font-size: 2.5rem; margin-bottom: 20px;">ยินดีต้อนรับ</h2>
+        <p style="font-size: 1.5rem; color: #333; max-width: 600px; margin: 0 auto;">
+          กรุณาคลิกลิงก์ด้านบนเพื่อเรียนรู้เพิ่มเติมเกี่ยวกับฉัน!</p>
+        <div style="margin-top: 40px; animation: bounce 1.5s infinite;">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF8C00">
+            <path d="M12 16l6-6H6l6 6z" />
+          </svg>
+        </div>
+      </section>
+
+      <section id="about" class="content" style="display:none; animation: fadeIn 1.5s ease;">
+        <h2 style="color: #ff8800; text-align: center; font-size: 2em; margin-bottom: 20px;">ประวัติส่วนตัว</h2>
+
+    <div
+      style="display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;">
+      <!-- รูปภาพติดบัตร -->
+      <img src="https://img5.pic.in.th/file/secure-sv1/IMG_75579080148a57639777.jpeg" alt="รูปติดบัตรของคุณ"
+        style="width: 150px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px; animation: scaleUp 1.5s ease;">
+
+      <!-- ข้อมูลส่วนตัว -->
+      <p style="animation: slideUp 1s ease 0.3s forwards; opacity: 0;"><strong>ชื่อ:</strong> นายศราวุฒิ แซ่ลิม (เชน)
+      </p>
+      <p style="animation: slideUp 1s ease 0.4s forwards; opacity: 0;"><strong>เกิดวันที่:</strong> 16 มีนาคม พ.ศ. 2550
+        (อายุ 17 ปี)</p>
+      <p style="animation: slideUp 1s ease 0.5s forwards; opacity: 0;"><strong>น้ำหนัก:</strong> 52 กก.
+        <strong>ส่วนสูง:</strong> 172 ซม. <strong>เชื้อชาติ:</strong> ไทย <strong>สัญชาติ:</strong> ไทย
+        <strong>เลือดกรุ๊ป:</strong> B+
+      </p>
+      <p style="animation: slideUp 1s ease 0.6s forwards; opacity: 0;"><strong>ปัจจุบันกำลังศึกษาที่:</strong>
+        โรงเรียนโยธินนุกูล แผนการเรียน วิทยาศาสตร์-คณิตศาสตร์</p>
+      <p style="animation: slideUp 1s ease 0.7s forwards; opacity: 0;"><strong>GPA:</strong> 3.48 (เกรดเฉลี่ย 5 เทอม)</p>
+      <p style="animation: slideUp 1s ease 0.8s forwards; opacity: 0;"><strong>ที่อยู่:</strong> 466/1 หมู่ 1
+        ต.โพธิ์กลาง อ.เมืองนครราชสีมา จ.นครราชสีมา</p>
+      <p style="animation: slideUp 1s ease 0.9s forwards; opacity: 0;"><strong>ความสนใจ:</strong> พัฒนาเว็บไซต์,
+        ปัญญาประดิษฐ์ (AI), แอปพลิเคชันมือถือ, โปรเจคส่วนตัว</p>
+
+      <div
+        style="background-color: #fff3e0; padding: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px; animation: fadeIn 2s ease 1s forwards; opacity: 0;">
+        <p>ผมสนใจในเรื่องการพัฒนาเว็บไซต์และ AI ปัญญาประดิษฐ์ นอกจากการเรียนในห้องเรียน
+          ผมยังสนใจทำโปรเจคส่วนตัวเกี่ยวกับการสร้างแอปพลิเคชันมือถือและการพัฒนาเว็บไซต์อีกด้วย</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+
+<section id="skills" class="content" style="display:none;">
+  <h1 style="text-align: center; color: #ff8800;">ทักษะของฉัน</h1>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="https://img5.pic.in.th/file/secure-sv1/-9_20241012150208.png" alt="HTML" title="HTML" class="skill-logo">
+      <p>HTML</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://img5.pic.in.th/file/secure-sv1/-6_20241012135236ea0999d99b8f109d.png" title="CSS" class="skill-logo">
+      <p>CSS</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://img2.pic.in.th/pic/-7_20241012135302e48b858cb3fa16c3.png" alt="JavaScript" title="JavaScript" class="skill-logo">
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://img2.pic.in.th/pic/-11_20241012151956.png" alt="Python" title="Python" class="skill-logo">
+      <p>Python</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://img2.pic.in.th/pic/IMG_08061e41990b14797aeb.png" alt="Gemini" title="Gemini" class="skill-logo">
+      <p>Gemini by Google</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://img2.pic.in.th/pic/-10_20241012150324.png" alt="ChatGPT" title="ChatGPT" class="skill-logo">
+      <p>ChatGPT</p>
+    </div>
+  </div>
+</section>
+
+  <section id="projects" class="content" style="display:none;">
+    <h2>โปรเจคที่ผ่านมา</h2>
+    <div class="project">
+      <h3>โปรเจค 1: แอปพลิเคชันการหาค่าเฉลี่ย</h3>
+      <p>ผมพัฒนาโปรเจคนี้คนเดียวศึกษาด้วยตัวเองในช่วงปิดภาคเรียนที่ผ่านมาผมได้ศึกษาการเขียนโปรแกรมแบบบล็อค
+        ผมฝึกโดยพื้นฐานน้อยมากแต่ด้วยความรักและความชอบของตัวผมเองก่อนหน้านั้นผมมีโอกาสเรียนคณิตศาสตร์เรื่องการหาค่าเฉลี่ยเลขคณิตจากวิชาคณิตศาสตร์พื้นฐานผมจึงได้เอาเรื่องนี้มาเขียนโปรแกรมแบบบล็อคและได้ขออนุญาตคุณครูนำเสนอโปรเจคนี้ในงานที่โรงเรียนและโปรเจคนี้ยังเป็นโปรเจคที่ผมภูมิใจมาก ๆ
+      </p>
+      <button onclick="showImage('project1')">ดูภาพกิจกรรม</button>
+    </div>
+
+    <div class="project">
+      <h3>โปรเจค 2: ระบบจัดการข้อมูลนักเรียน</h3>
+      <p>โปรเจคนี้ทำขึ้นโดยการใช้งานฐานข้อมูลเพื่อจัดการข้อมูลนักเรียนอย่างมีประสิทธิภาพ โดยใช้ PHP และ MySQL ในการพัฒนา
+      </p>
+      <button onclick="showImage('project2')">ดูภาพกิจกรรม</button>
+    </div>
+
+    <div class="project">
+      <h3>โปรเจค 3: เว็บแอปพลิเคชันสั่งซื้ออาหาร</h3>
+      <p>แอปพลิเคชันนี้พัฒนาโดยใช้ React และ Node.js โดยสามารถสั่งซื้ออาหารออนไลน์ได้ง่ายและรวดเร็ว</p>
+      <button onclick="showImage('project3')">ดูภาพกิจกรรม</button>
+    </div>
+  </section>
+
+  <section id="certificates" class="content" style="display:none;">
+    <h2>เกียรติบัตร</h2>
+    <div class="certificates-grid">
+      <div class="certificate-item">
+        <img src="https://img2.pic.in.th/pic/IMG_86356c8a2bf6f3771490.jpeg" alt="เกียรติบัตรที่ 1">
+        <div class="certificate-info">
+          <h3> การฝึกอบรมการเขียนคำสั่ง Coding & Robot</h3>
+          <p>วันที่: 1 ธันวาคม 2565</p>
+          <p>สถานที่: โรงเรียนด่านเกวียนวิทยา</p>
+          <p>รายละเอียด: ได้เป็นนักเรียนแกนนำองค์การบริหารส่วนจังหวัดนครราชสีมา ได้เข้าร่วมการฝึกการเขียนคำสั่ง Coding &
+            Robot</p>
+          <p>สิ่งที่ได้รับ: ได้ฝึกเขียนโค้ดสำหรับรถคีบกระป๋องเบื้องต้น นี่เป็นค่ายแรกที่คุณครูพามา
+            ได้ฝึกเขียนโค้ดเป็นภาษาเขียน และได้รับเกียรติบัตรเหรียญรางวัลและเสื้อแคมป์</p>
+          <button onclick="showImage('certificate1')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_03166feef9a879dda3cc.jpeg" alt="เกียรติบัตรที่ 2">
+        <div class="certificate-info">
+          <h3>Learn Coding Basic with Book-Based Programming</h3>
+          <p>วันที่: 1 ตุลาคม 2567</p>
+          <p>รายละเอียด: ได้เรียนรู้พื้นฐานการเขียนโค้ดผ่านการทำโปรแกรมแบบบล็อกลงสมาร์ทโฟน</p>
+          <p>สิ่งที่ได้รับ: ได้เรียนการเขียนโปรแกรมแบบบล็อกผ่านทางออนไลน์และนำมาสร้างเป็นแอปพลิเคชันการหาค่าเฉลี่ย</p>
+          <p>โปรแกรมชื่อ MIT-Inventor</p>
+
+          <button onclick="showImage('certificate2')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img2.pic.in.th/pic/IMG_00244e9ae6d306f8a3a0.jpeg" alt="เกียรติบัตรที่ 3">
+        <div class="certificate-info">
+          <h3>CERTIFICATE OF INTERNET AWESOMENESS</h3>
+          <p>วันที่: 20 กันยายน 2567</p>
+          <p>สถานที่: โรงเรียนโยธินนุกูล</p>
+          <p>รายละเอียด: ฉลาด: เข้าใจวิธีแบ่งปันกับคนที่คุณรู้จักและคนที่คุณไม่รู้จัก</p>
+          <p>ใจดี: ได้สร้างผลกระทบเชิงบวกต่อผู้อื่นด้วยความเมตตา</p>
+          <p>แจ้งเตือน: ได้รู้วิธีบอกความแตกต่างระหว่างการแจ้งเตือนของจริงและของปลอม</p>
+          <p>แข็งแกร่ง: ได้รู้ถึงป้องกันกาาระบุข้อมูลส่วนบุคคลของตัวเองและปกป้องมันด้วยรหัสผ่านที่รัดกุม</p>
+          <p>กล้าหาญ: ได้รู้ถึงความสําคัญของการสื่อสารอย่างเปิดเผยกับผู้ใหญ่ที่เชื่อถือได้เกี่ยวกับกิจกรรมออนไลน์</p>
+          <p>สิ่งที่ได้รับ: ได้รู้จักมีน้ำใจกับเพื่อนบนโลกอินเตอร์เน็ต รู้จักการตั้งรหัสผ่านที่รัดกุม รู้จักการคิดก่อนแชร์
+            ไม่ให้ข้อมูลผู้อื่นและไม่กดลิงก์ที่แปลกปลอม</p>
+          <p><strong>Certificate By Google</strong></p>
+
+          <button onclick="showImage('certificate3')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img2.pic.in.th/pic/IMG_8657b3fb6ce506b801da.jpeg" alt="เกียรติบัตรที่ 4">
+        <div class="certificate-info">
+          <h3> วัดความรู้ทั่วไปเกี่ยวกับวิทยาศาสตร์และเทคโนโลยี </h3>
+          <p>วันที่: 18 สิงหาคม 2565</p>
+          <p>สถานที่: โรงเรียนอรพิมพ์วิทยา</p>
+          <p>รายละเอียด: ได้ผ่านการทดสอบวัดความรู้ทั่วไปเกี่ยวกับวิทยาศาสตร์และเทคโนโลยีในการจัดกิจกรรมวันวิทยาศาสตร์
+            ประจำปีการศึกษา 2565
+            ผ่านเกณฑ์การประเมินคิดเป็น 95%</p>
+          <p>สิ่งที่ได้รับ: ได้วัดความรู้ทางวิทยาศาสตร์ว่าตัวเรามีความรู้เกี่ยวกับวิทยาศาสตร์และเทคโนโลยีมากแค่ไหน</p>
+
+          <!-- <button onclick="showImage('certificate4')">ดูภาพกิจกรรม</button> -->
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img2.pic.in.th/pic/IMG_026243260e472ddee617.jpeg" alt="เกียรติบัตรที่ 5">
+        <div class="certificate-info">
+          <h3>รางวัลระดับเหรียญทอง</h3>
+          <h3> การประกวดแข่งขันโครงงาน กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี</h3>
+          <p>วันที่: 13 กรกฎาคม 2567</p>
+          <p>สถานที่: เทศบาลอุดรธานี จังหวัดอุดรธานี </p>
+          <p>สิ่งที่ได้รับ: ได้ประกวดโครงงานวิทยาศาสตร์เคมี เกี่ยวกับการนำนมพาสเจอไรซ์มาทำเป็นพลาสติก</p>
+          <p>การทำงานเป็นทีม: ในการประกวดโครงงานวิทยาศาสตร์ในครั้งนี้ผมได้เป็นหัวหน้าและคอยเทรนน้อง ๆ
+            อีกสองคนในการทำโครงงานนี้</p>
+          <p>สิ่งที่ได้รับ: ได้ฝึกการเป็นผู้นำ การพูด และความรู้ในการสกัดโปรตีนจากน้ำนมพาสเจอไรซ์</p>
+
+          <button onclick="showImage('certificate5')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img5.pic.in.th/file/secure-sv1/-144_20240704152314.jpeg" alt="เกียรติบัตรที่ 6">
+        <div class="certificate-info">
+          <h3>รางวัลระดับเหรียญทอง</h3>
+          <h3> การแข่งขันการแสดงทางวิทยาศาสตร์ (Science Show)</h3>
+          <p>วันที่: 22 ธันวาคม 2566</p>
+          <p>สถานที่: โรงเรียนบุญวัฒนา จังหวัดนครราชสีมา </p>
+          <p>รายละเอียด: ได้เป็นตัวแทนไปแข่งศิลปหัตถกรรมนักเรียนการแข่งขันการแสดงทางวิทยาศาสตร์ </p>
+          <p>สิ่งที่ได้รับ:
+            ได้กล้าแสดงออกได้ฝึกออกทักษะความคิดสร้างสรรค์มีความรู้ความเข้าใจเกี่ยวกับการแสดงและการทดลองที่โชว์ ฝึกทำงานกับเพื่อนและน้องเป็นทีม </p>
+
+           <button onclick="showImage('certificate6')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img2.pic.in.th/pic/IMG_863368142be16a9b6ab8.jpeg" alt="เกียรติบัตรที่ 7">
+        <div class="certificate-info">
+          <h3> การอบรมเชิงปฏิบัติการ ค่าย MAE ROBOTIC CAMP ครั้งที่ 3 หลักสูตร Programmable Logic Controller (PLC)
+            เบื้องต้น </h3>
+          <p>วันที่: 17 มีนาคม 2567</p>
+          <p>สถานที่: มหาวิทยาลัยเทคโนโลยีสุรนารี</p>
+          <p> รายละเอียด: ได้อบรมเชิงปฏิบัติการ ค่าย MAE ROBOTIC CAMP ครั้งที่ 3 หลักสูตร Programmable Logic Controller
+            (PLC) เบื้องต้น</p>
+          <p>สิ่งที่ได้รับ: ได้ทำกิจกรรม workshopเกี่ยวกับวิศวะกรรมศาสตร์ เช่นการเขียนวงจรไฟฟ้า
+            การดูการทำงานของแขนหุ่นยนต์ได้เจอเพื่อนใหม่</p>
+          <button onclick="showImage('certificate7')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_86321051f1d43025c0cb.jpeg" alt="เกียรติบัตรที่ 8">
+        <div class="certificate-info">
+          <h3>เป็นสมาชิกคณะสภานักเรียนประจำปี 2566</h3>
+          <p>วันที่: 13 มิถุนายน 2567</p>
+          <p>สถานที่: โรงเรียนโยธินนุกูล</p>
+          <p>รายละเอียด: ได้จัดการเลือกตั้งและได้รับเลือกเป็นสมาชิกคณะสภานักเรียน</p>
+          <p>สิ่งที่ได้รับ: ได้ฝึกเป็นผู้นำ ได้ฝึกการทำงานเป็นทีมกับสมาชิกคณะสภานักเรียน ได้ฝึกทำกิจกรรมต่างๆให้โรงเรียน
+          </p>
+          <button onclick="showImage('certificate8')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img2.pic.in.th/pic/IMG_8636e61fe3c62f8be51a.jpeg" alt="เกียรติบัตรที่ 9">
+        <div class="certificate-info">
+          <h3>TO BE NUMBER ONE 1️⃣</h3>
+          <p>วันที่: 14 มิถุนายน 2565</p>
+          <p>สถานที่: เอี่ยมเฮง อำเภอเสิงสาง จังหวัดนครราชสีมา </p>
+          <p>รายละเอียด: ได้ผ่านการฝึกอบรมโครงการเยาวชนเฝ้าระวังและแก้ไขปัญหายาเสพติด </p>
+          <p>สิ่งที่ได้รับ: ได้รับรู้ถึงโทษของยาเสพติด เป็นกำลังสำคัญในการป้องกันสิ่งเสพติดในวัยรุ่น</p>
+          <button onclick="showImage('certificate9')">ดูภาพกิจกรรม</button>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img src="https://img5.pic.in.th/file/secure-sv1/-145_20240704164202f432c7a28974bc0e.jpeg"
+          alt="เกียรติบัตรที่ 10">
+        <div class="certificate-info">
+          <h3>โครงการส่งเสริมคุณธรรมจริยธรรม</h3>
+          <p>วันที่: 11-12 พฤษภาคม 2565</p>
+          <p>สถานที่: โรงเรียนอรพิมพ์วิทยา</p>
+          <p>รายละเอียด: ผ่านการอบรมค่านิยมที่พึงประสงค์</p>
+            <p>สิ่งที่ได้รับ: 	1.	ได้ความรู้และความเข้าใจ: ได้เรียนรู้เกี่ยวกับคุณธรรม เช่น ความซื่อสัตย์ ความรับผิดชอบ การช่วยเหลือผู้อื่น และค่านิยมที่ดีในสังคม </p>
+             <p>2.	ได้การพัฒนาทักษะสังคม: ได้ฝึกการทำงานเป็นทีม การสื่อสาร การทำงานร่วมกับผู้อื่นในอนาคต และการสร้างสัมพันธ์ที่ดีในกลุ่ม</p>
+              <p>3.	ได้การสะท้อนความคิด: โอกาสในการคิดและวิเคราะห์เกี่ยวกับค่านิยมและพฤติกรรมของตนเอง และแนวทางในการพัฒนาในอนาคต
+            </p>
+            
+          
+          <!-- <button onclick="showImage('certificate10')">ดูภาพกิจกรรม</button> -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal for displaying images -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <img id="modalImage" src="" alt="Modal Image" style="width: 100%;">
+      <p id="modalDescription"></p>
+      <button id="closeButton"
+        style="margin-top: 15px; padding: 10px; background-color: #FFA500; color: white; border: none; border-radius: 5px;">ปิด</button>
+    </div>
+  </div>
+
+  <script>
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    document.getElementById('closeButton').onclick = closeModal; // เพิ่มการเชื่อมโยงปุ่มปิดที่นี่
+
+  // ฟังก์ชันอื่นๆ ไม่มีการเปลี่ยนแปลง
+  </script>
+
+
+  <footer style="background-color: #333; color: #fff; padding: 20px 0; text-align: center;">
+    <p>ติดต่อฉันได้ที่ <a href="mailto:S.sarawutis07@gmail.com"
+        style="color: #ffcc00; text-decoration: none;">S.sarawutis07@gmail.com</a></p>
+    <p>Tel: <a href="tel:0960139340" style="color: #ffcc00; text-decoration: none;">096-013-9340</a></p>
+    <p>ที่อยู่: 466/1 หมู่ 1 ต.โพธิ์กลาง อ.เมืองนครราชสีมา จ.นครราชสีมา</p>
+    <p>&copy; 2024 Portfolio of Sarawut Saelim</p>
+  </footer>
+
+  <style>
+    footer p {
+      margin: 8px 0;
+    }
+
+    footer a:hover {
+      color: #ffa500;
+      /* สีเมื่อโฮเวอร์ */
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showImage(type) {
+      let imgSrc = '';
+      let description = '';
+      let title = '';
+
+      switch (type) {
+        case 'project1':
+          imgSrc = 'https://img2.pic.in.th/pic/Untitled-design0b0a999b02bdd3b0.jpeg';
+          title = 'ภาพกิจกรรมโปรเจค 1: แอปพลิเคชันการหาค่าเฉลี่ย';
+          description = 'รายละเอียดเกี่ยวกับกิจกรรมโปรเจค 1: แอปพลิเคชันการหาค่าเฉลี่ย';
+          break;
+        case 'project2':
+          imgSrc = 'https://via.placeholder.com/500';
+          title = 'ภาพกิจกรรมโปรเจค 2: ระบบจัดการข้อมูลนักเรียน';
+          description = 'รายละเอียดเกี่ยวกับกิจกรรมโปรเจค 2: ระบบจัดการข้อมูลนักเรียน';
+          break;
+        case 'project3':
+          imgSrc = 'https://via.placeholder.com/500';
+          title = 'ภาพกิจกรรมโปรเจค 3: เว็บแอปพลิเคชันสั่งซื้ออาหาร';
+          description = 'รายละเอียดเกี่ยวกับกิจกรรมโปรเจค 3: เว็บแอปพลิเคชันสั่งซื้ออาหาร';
+          break;
+        case 'certificate1':
+          imgSrc = 'https://img2.pic.in.th/pic/Untitled-design0b0a999b02bdd3b0.jpeg';
+          title = 'ภาพการฝึกอบรมการเขียนคำสั่ง Coding & Robot';
+          description = 'ภาพการฝึกอบรมการเขียนคำสั่ง Coding & Robot';
+          break;
+        case 'certificate2':
+          imgSrc = 'https://via.placeholder.com/500';
+          title = 'ภาพเกียรติบัตรการเข้าร่วมการอบรม AI';
+          description = 'รายละเอียดเกี่ยวกับเกียรติบัตรการเข้าร่วมการอบรม AI';
+          break;
+        case 'certificate3':
+          imgSrc = 'https://via.placeholder.com/500';
+          title = 'ภาพเกียรติบัตรการเข้าร่วมการอบรมการพัฒนาเว็บไซต์';
+          description = 'รายละเอียดเกี่ยวกับการเข้าร่วมการอบรมการพัฒนาเว็บไซต์';
+          break;
+        case 'certificate4':
+          imgSrc = 'https://via.placeholder.com/500';
+          title = 'ภาพเกียรติบัตรการเข้าร่วมการอบรมการพัฒนาเว็บไซต์';
+          description = 'รายละเอียดเกี่ยวกับการเข้าร่วมการอบรมการพัฒนาเว็บไซต์';
+          break;
+        case 'certificate5':
+          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/Untitled-design6af7fdf8a133a67a.png';
+          title = 'การประกวดแข่งขันโครงงาน กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี';
+          description = 'ได้รับรางวัลระดับเหรียญทอง';
+          break;
+        case 'certificate6':
+          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/Untitled-designe5bc1586c9e7d7a2.png';
+          title = 'การแข่งขันการแสดงทางวิทยาศาสตร์ (Science Show)';
+          description = 'ได้รับรางวัลระดับเหรียญทอง';
+          break;
+        case 'certificate7':
+          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/Untitled-designd16f92a42500db23.png';
+          title = 'ภาพการอบรมค่าย MAE';
+          description = 'การอบรมเชิงปฏิบัติการ ค่าย MAE ROBOTIC CAMP ครั้งที่ 3 หลักสูตร Programmable Logic Controller (PLC) เบื้องต้น';
+          break;
+        case 'certificate8':
+          imgSrc = 'https://img2.pic.in.th/pic/IMG_0225aa6bbfc21d052d1f.jpeg';
+          title = 'ภาพคณะสภานักเรียนประจำปี พ.ศ. 2566';
+          description = 'ได้เป็นคณะสภานักเรียนและคอยดูแลเกี่ยวกับเพจสภานักเรียน';
+          break;
+        case 'certificate9':
+          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/IMG_1976bbad2cd90224daa1.jpeg';
+          title = 'ภาพการเข้าอบรม To be number one';
+          description = 'active learning to be number one 1️⃣';
+          break;
+        case 'certificate10':
+         // imgSrc = 'https://via.placeholder.com/500';
+        //  title = 'ภาพเกียรติบัตรการเข้าร่วมการอบรมการพัฒนาเว็บไซต์';
+        //  description = 'รายละเอียดเกี่ยวกับการเข้าร่วมการอบรมการพัฒนาเว็บไซต์';
+          break;
+      }
+      
+  document.getElementById('modalImage').src = imgSrc;
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDescription').innerText = description;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    document.getElementById('closeButton').onclick = closeModal;
+  </script>
+  
+
+</body>
+
+</html>
+
+</body>
+</html>
