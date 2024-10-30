@@ -394,17 +394,14 @@
   </section>
 
   <!-- Modal for displaying images -->
-  <div id="imageModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <img id="modalImage" src="" alt="Modal Image" style="width: 100%;">
-      <p id="modalDescription"></p>
-      <button id="closeButton"
-        style="margin-top: 15px; padding: 10px; background-color: #FFA500; color: white; border: none; border-radius: 5px;">ปิด</button>
-    </div>
-  </div>
-
+      <div id="imageModal" class="modal">
+        <div class="modal-content">
+          <h3 id="modalTitle"></h3>
+          <img id="modalImage" src="" alt="Modal Image" style="width: 100%;">
+          <p id="modalDescription"></p>
+          <button id="closeButton" style="margin-top: 15px; padding: 10px; background-color: #FFA500; color: white; border: none; border-radius: 5px;">ปิด</button>
+        </div>
+      </div>
   <script>
     function closeModal() {
       document.getElementById('imageModal').style.display = 'none';
