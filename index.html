@@ -187,7 +187,7 @@
       <p>Canva</p>
       </div>
       <div class="skill-item">
-        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_1180.png" alt="CapCut" title="CapCut" class="skill-logo">
+        <img src="https://img2.pic.in.th/pic/-17_20241030161803.png" alt="CapCut" title="CapCut" class="skill-logo">
         <p>CapCut</p>
     </div>
     <div class="skill-item">
@@ -212,11 +212,32 @@
     </div>
 
     <div class="project">
-      <h3>โปรเจค 2: ระบบจัดการข้อมูลนักเรียน</h3>
-      <p>โปรเจคนี้ทำขึ้นโดยการใช้งานฐานข้อมูลเพื่อจัดการข้อมูลนักเรียนอย่างมีประสิทธิภาพ โดยใช้ PHP และ MySQL ในการพัฒนา
-      </p>
-      <button onclick="showImage('project2')">ดูภาพกิจกรรม</button>
+      <h3>โปรเจค 2: สอนการทำรายรับ-รายจ่าย  ‎‎⠀ บนแอปพลิเคชัน Excel</h3>
+      <p>โปรเจคนี้ทำขึ้นส่งคุณครูรายวิชาวิทยาการคอมพิวเตอร์ เป็นงานที่ต้องอัดวิดีโอทำสิ่งที่ตนเองสนใจอยากรีวิว ผมเองมีความรู้พื้นฐานการเขียนโค้ดคำสั่งใน Excel อยู่แล้วเลยทำโปรเจคนี้ขึ้นมาครับ </p>
+      <p2>
+         <strong> กดปุ่มดูภาพกิจกรรมเพื่อชมวิดีโอ</strong>
+      </p2>
+      
+      <button onclick="showVideo()">ดูภาพกิจกรรม</button>
+      <div id="videoContainer" style="display: none; max-width: 100%;">
+          <h4>วิดีโอกิจกรรม:</h4>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jw1kZc4iiYU" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
+
+    <script>
+    function showVideo() {
+      var container = document.getElementById('videoContainer');
+      container.style.display = 'block'; // แสดง div ที่มี iframe
+    }
+    </script>
+    
+    <script>
+    function showVideo() {
+      var container = document.getElementById('videoContainer');
+      container.style.display = 'block'; // แสดง div ที่มี iframe
+    }
+    </script>
 
     <div class="project">
       <h3>โปรเจค 3: เว็บแอปพลิเคชันสั่งซื้ออาหาร</h3>
@@ -391,6 +412,16 @@
 
     document.getElementById('closeButton').onclick = closeModal; // เพิ่มการเชื่อมโยงปุ่มปิดที่นี่
 
+
+    function showVideo() {
+        var videoContainer = document.getElementById("videoContainer");
+        if (videoContainer.style.display === "none") {
+            videoContainer.style.display = "block";
+        } else {
+            videoContainer.style.display = "none";
+        }
+    }
+    
   // ฟังก์ชันอื่นๆ ไม่มีการเปลี่ยนแปลง
   </script>
 

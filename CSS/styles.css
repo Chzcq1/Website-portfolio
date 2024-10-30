@@ -378,3 +378,19 @@ footer {
 .event-image.show {
   opacity: 1;
 }
+#videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; /* ปรับขนาดสูงสุดตามที่คุณต้องการ */
+  margin: 20px auto; /* จัดกลาง */
+  padding: 10px; /* เพิ่มพื้นที่รอบๆ */
+  border: 1px solid #ccc; /* เพิ่มกรอบให้กับวิดีโอ */
+  border-radius: 5px; /* มุมโค้ง */
+}
+
+iframe {
+  width: 100%; /* ทำให้วิดีโอกว้าง 100% ของ div */
+  height: auto; /* ความสูงจะปรับอัตโนมัติตามสัดส่วน */
+  aspect-ratio: 16/9; /* กำหนดอัตราส่วน 16:9 */
+}
