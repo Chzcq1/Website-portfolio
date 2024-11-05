@@ -242,10 +242,61 @@
     </script>
 
     <div class="project">
-      <h3>โปรเจค 3: เว็บแอปพลิเคชันสั่งซื้ออาหาร</h3>
-      <p>แอปพลิเคชันนี้พัฒนาโดยใช้ React และ Node.js โดยสามารถสั่งซื้ออาหารออนไลน์ได้ง่ายและรวดเร็ว</p>
-      <button class="view-video-btn" onclick="showImage('project3')">ดูภาพกิจกรรม</button>
+      <h3>โปรเจค 3: เว็บไซต์ความรู้เกี่ยวกับคลื่นวิทยุ</h3>
+      <p>โปรเจคนี้เป็นโปรเจคเล็กๆที่ผมทำกับกลุ่มเพื่อนเพื่อนำเสนอคุณครูในรายวิชาฟิสิกส์</p>
+      <button class="toggle-button" onclick="toggleImage()">ดูภาพกิจกรรม</button>
+      <div id="imageContainer" class="image-container" style="display: none;">
+          <h4>ภาพกิจกรรม:</h4>
+          <img id="projectImage" src="https://img5.pic.in.th/file/secure-sv1/Radio-waves.png" alt="Project 3 Image" style="width: 100%; max-width: 500px; display: block; margin: auto; cursor: pointer;" onclick="toggleLargeImage()">
+          <div style="text-align: center; margin-top: 10px;">
+              <a href="https://chzcq1.github.io/Radioweves/" target="_blank" style="text-decoration: none;">
+                  <button style="padding: 6px 12px; /* ลดขนาด padding ลง */
+                      font-size: 0.85rem; /* ลดขนาดฟอนต์ */
+                      font-weight: normal; /* เปลี่ยนฟอนต์ให้เบาลง */
+                      color: white;
+                      background: linear-gradient(135deg, #FFA500, #FF8C00); /* ใช้สีที่นุ่มนวลกว่า */
+                      border: none;
+                      border-radius: 8px;
+                      cursor: pointer;
+                      transition: transform 0.3s ease, background-color 0.3s ease;
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* ลดความเข้มของเงา */
+                      max-width: 200px; /* กำหนดความกว้างสูงสุด */
+                      margin: 0 auto;"> <!-- Centering -->
+                      ไปยังหน้าเว็บไซต์
+                  </button>
+              </a>
+          </div>
+      </div>
     </div>
+
+    <!-- Large Image Modal -->
+    <div id="largeImageModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
+      <img id="largeImage" src="" alt="Large Project Image" style="max-width: 90%; max-height: 90%; margin: auto; display: block; cursor: pointer;" onclick="toggleLargeImage()">
+    </div>
+
+    <script>
+      function toggleImage() {
+          var imageContainer = document.getElementById("imageContainer");
+          if (imageContainer.style.display === "none" || imageContainer.style.display === "") {
+              imageContainer.style.display = "block";
+          } else {
+              imageContainer.style.display = "none";
+          }
+      }
+
+      function toggleLargeImage() {
+          var modal = document.getElementById("largeImageModal");
+          var image = document.getElementById("projectImage");
+          var largeImage = document.getElementById("largeImage");
+
+          if (modal.style.display === "none" || modal.style.display === "") {
+              largeImage.src = image.src; // Set the large image source
+              modal.style.display = "flex"; // Show the modal
+          } else {
+              modal.style.display = "none"; // Hide the modal
+          }
+      }
+    </script>
   </section>
 
   <section id="certificates" class="content" style="display:none;">

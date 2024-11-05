@@ -131,10 +131,8 @@ nav ul li a {
 }
 
 /* การตอบสนองสำหรับหน้าจอขนาดกลาง */
-@media (max-width: 768px) {
-  nav ul {
-      flex-direction: column;
-  }
+@media (max-width: 834px) {
+
   nav ul li {
       margin: 10px 0;
   }
@@ -416,3 +414,25 @@ iframe {
 .view-video-btn:focus {
   outline: none; /* ลบเส้นขอบเมื่อมีการคลิก */
 }
+
+.toggle-button {
+  padding: 4px 10px;  /* ลดขนาด padding ลง */
+  font-size: 0.85rem;   /* ลดขนาดฟอนต์ */
+  font-weight: normal; /* เปลี่ยนฟอนต์ให้เบาลง */
+  color: white;
+  background: linear-gradient(135deg, #FFA500, #FF8C00); /* ใช้สีที่นุ่มนวลกว่า */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* ลดความเข้มของเงา */
+}
+
+  .image-container {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #fff8dc;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+
