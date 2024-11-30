@@ -1,6 +1,5 @@
-    <!DOCTYPE html> <!--html5-->
-    <html lang="th"> <!--ภาษาไทย-->
-
+    <!DOCTYPE html> 
+    <html lang="th">
     <head> <!--หัวเว็บ-->
       <meta charset="UTF-8"> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--การกำหนดขนาดหน้าจอ-->
@@ -10,7 +9,16 @@
       <!--การเชื่อมต่อไฟล์ css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <link rel="stylesheet" href="CSSbackgroudwelcome/backgroudwelcome.css">
+
+      <!--การเชื่อมไฟล์ Java script-->
+      
       <script src="https://kit.fontawesome.com/5cae9cec43.js" crossorigin="anonymous"></script>
+
+      <script src="Script.js"">
+         
+      </script>
+      
+      
     </head>
 
     <body>
@@ -242,61 +250,71 @@
     </script>
 
     <div class="project">
-      <h3>โปรเจค 3: เว็บไซต์ความรู้เกี่ยวกับคลื่นวิทยุ</h3>
-      <p>โปรเจคนี้เป็นโปรเจคเล็กๆที่ผมทำกับกลุ่มเพื่อนเพื่อนำเสนอคุณครูในรายวิชาฟิสิกส์</p>
-      <button class="toggle-button" onclick="toggleImage()">ดูภาพกิจกรรม</button>
-      <div id="imageContainer" class="image-container" style="display: none;">
-          <h4>ภาพกิจกรรม:</h4>
-          <img id="projectImage" src="https://img5.pic.in.th/file/secure-sv1/Radio-waves.png" alt="Project 3 Image" style="width: 100%; max-width: 500px; display: block; margin: auto; cursor: pointer;" onclick="toggleLargeImage()">
-          <div style="text-align: center; margin-top: 10px;">
-              <a href="https://chzcq1.github.io/Radioweves/" target="_blank" style="text-decoration: none;">
-                  <button style="padding: 6px 12px; /* ลดขนาด padding ลง */
-                      font-size: 0.85rem; /* ลดขนาดฟอนต์ */
-                      font-weight: normal; /* เปลี่ยนฟอนต์ให้เบาลง */
-                      color: white;
-                      background: linear-gradient(135deg, #FFA500, #FF8C00); /* ใช้สีที่นุ่มนวลกว่า */
-                      border: none;
-                      border-radius: 8px;
-                      cursor: pointer;
-                      transition: transform 0.3s ease, background-color 0.3s ease;
-                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* ลดความเข้มของเงา */
-                      max-width: 200px; /* กำหนดความกว้างสูงสุด */
-                      margin: 0 auto;"> <!-- Centering -->
-                      ไปยังหน้าเว็บไซต์
-                  </button>
-              </a>
-          </div>
+      <h3>โปรเจค 3: เว็บไซต์คำนวณเกรด GPA</h3>
+      <p>โปรเจคนี้เป็นโปรเจคท่ีผมลองฝึกใช้ภาษา JavaScript ในการคำนวณเกรดออกมา</p>
+      <button class="toggle-button" onclick="toggleImage('imageContainer1')">ดูภาพกิจกรรม</button>
+      <div id="imageContainer1" class="image-container" style="display: none; position: relative; padding-bottom: 60px;">
+        <h4>ภาพกิจกรรม:</h4>
+        <img id="projectImage1" 
+             src="https://img2.pic.in.th/pic/IMG_1926.png" 
+             alt="ภาพตัวอย่างของโปรเจค 3" 
+             style="width: 100%; max-width: 500px; display: block; margin: auto; cursor: pointer;" 
+             onclick="toggleLargeImage('projectImage1')">
+        <!-- ปุ่มไปยังเว็บไซต์ -->
+        <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+          <a href="https://chzcq1.github.io/Calculate_GPA/" target="_blank" style="text-decoration: none;">
+            <button style="padding: 10px 16px; font-size: 0.9rem; font-weight: normal; color: white; 
+                        background: linear-gradient(135deg, #FFA500, #FF8C00); border: none; border-radius: 8px; 
+                        cursor: pointer; transition: transform 0.3s ease, background-color 0.3s ease; 
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); max-width: 220px;">
+              ไปยังหน้าเว็บไซต์
+            </button>
+          </a>
+        </div>
       </div>
     </div>
 
+    <div class="project">
+      <h3>โปรเจค 4: เว็บไซต์ความรู้เกี่ยวกับคลื่นวิทยุ</h3>
+      <p>โปรเจคนี้เป็นโปรเจคเล็กๆที่ผมทำกับกลุ่มเพื่อนเพื่อนำเสนอคุณครูในรายวิชาฟิสิกส์</p>
+      <button class="toggle-button" onclick="toggleImage('imageContainer2')">ดูภาพกิจกรรม</button>
+      <div id="imageContainer2" class="image-container" style="display: none; position: relative; padding-bottom: 60px;">
+        <h4>ภาพกิจกรรม:</h4>
+        <img id="projectImage2" 
+             src="https://img5.pic.in.th/file/secure-sv1/Radio-waves.png" 
+             alt="ภาพตัวอย่างของโปรเจค 4" 
+             style="width: 100%; max-width: 500px; display: block; margin: auto; cursor: pointer;" 
+             onclick="toggleLargeImage('projectImage2')">
+        <!-- ปุ่มไปยังเว็บไซต์ -->
+        <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+          <a href="https://chzcq1.github.io/Radioweves/" target="_blank" style="text-decoration: none;">
+            <button style="padding: 10px 16px; font-size: 0.9rem; font-weight: normal; color: white; 
+                        background: linear-gradient(135deg, #FFA500, #FF8C00); border: none; border-radius: 8px; 
+                        cursor: pointer; transition: transform 0.3s ease, background-color 0.3s ease; 
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); max-width: 220px;">
+              ไปยังหน้าเว็บไซต์
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function toggleImage(imageContainerId) {
+        var imageContainer = document.getElementById(imageContainerId);
+        if (imageContainer.style.display === "none" || imageContainer.style.display === "") {
+          imageContainer.style.display = "block";
+        } else {
+          imageContainer.style.display = "none";
+        }
+      }
+    </script>
+   
+    
     <!-- Large Image Modal -->
     <div id="largeImageModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
       <img id="largeImage" src="" alt="Large Project Image" style="max-width: 90%; max-height: 90%; margin: auto; display: block; cursor: pointer;" onclick="toggleLargeImage()">
     </div>
-
-    <script>
-      function toggleImage() {
-          var imageContainer = document.getElementById("imageContainer");
-          if (imageContainer.style.display === "none" || imageContainer.style.display === "") {
-              imageContainer.style.display = "block";
-          } else {
-              imageContainer.style.display = "none";
-          }
-      }
-
-      function toggleLargeImage() {
-          var modal = document.getElementById("largeImageModal");
-          var image = document.getElementById("projectImage");
-          var largeImage = document.getElementById("largeImage");
-
-          if (modal.style.display === "none" || modal.style.display === "") {
-              largeImage.src = image.src; // Set the large image source
-              modal.style.display = "flex"; // Show the modal
-          } else {
-              modal.style.display = "none"; // Hide the modal
-          }
-      }
-    </script>
   </section>
 
   <section id="certificates" class="content" style="display:none;">
@@ -455,25 +473,31 @@
           <button id="closeButton" style="margin-top: 15px; padding: 10px; background-color: #FFA500; color: white; border: none; border-radius: 5px;">ปิด</button>
         </div>
       </div>
+      
   <script>
-    function closeModal() {
-      document.getElementById('imageModal').style.display = 'none';
-    }
-
-    document.getElementById('closeButton').onclick = closeModal; // เพิ่มการเชื่อมโยงปุ่มปิดที่นี่
-
-
-    function showVideo() {
-        var videoContainer = document.getElementById("videoContainer");
-        if (videoContainer.style.display === "none") {
-            videoContainer.style.display = "block";
+    function toggleImage(containerId) {
+        var imageContainer = document.getElementById(containerId);
+        if (imageContainer.style.display === "none" || imageContainer.style.display === "") {
+            imageContainer.style.display = "block";
         } else {
-            videoContainer.style.display = "none";
+            imageContainer.style.display = "none";
         }
     }
-    
-  // ฟังก์ชันอื่นๆ ไม่มีการเปลี่ยนแปลง
+
+    function toggleLargeImage(imageId) {
+        var modal = document.getElementById("largeImageModal");
+        var largeImage = document.getElementById("largeImage");
+        var image = document.getElementById(imageId);
+
+        if (modal.style.display === "none" || modal.style.display === "") {
+            largeImage.src = image.src; // ใช้ src ของรูป
+            modal.style.display = "flex"; // แสดง modal
+        } else {
+            modal.style.display = "none"; // ซ่อน modal
+        }
+    }
   </script>
+  
 
 
   <footer style="background-color: #333; color: #fff; padding: 20px 0; text-align: center;">
