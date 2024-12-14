@@ -13,8 +13,6 @@
       <!--การเชื่อมไฟล์ Java script-->
       
       <script src="https://kit.fontawesome.com/5cae9cec43.js" crossorigin="anonymous"></script>
-
-      <script src="Script.js"">
          
       </script>
       
@@ -24,7 +22,7 @@
     <body>
 
       <!-- ส่วนเปิดใช้งานเสียงต้อนรับ -->
-      <audio id="background-sound" src="welcomebackground/welcome.mp3"></audio>
+    <!--  <audio id="background-sound" src="welcomebackground/welcome.mp3"></audio>
 
       <script>
         // Function to play the audio when the page is loaded
@@ -32,7 +30,7 @@
           var audio = document.getElementById('background-sound');
           audio.play();
         });
-      </script>
+      </script> -->
       <!-- ส่วนเปิดใช้งานเสียงต้อนรับ -->
 
       <!-- หน้าจอต้อนรับแบบเต็มจอ -->
@@ -59,6 +57,11 @@
         </ul>
       </nav>
 
+      <button id="darkModeToggle" class="toggle-btn">
+          <span class="icon sun"></span>
+          <span class="icon moon"></span>
+      </button>
+     
       <script>
         document.addEventListener('DOMContentLoaded', function () {
           const navLinks = document.querySelectorAll('nav ul li a');
@@ -92,7 +95,7 @@
     <div
       style="display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;">
       <!-- รูปภาพติดบัตร -->
-      <img src="https://img5.pic.in.th/file/secure-sv1/IMG_75579080148a57639777.jpeg" alt="รูปติดบัตรของคุณ"
+      <img src="https://i.postimg.cc/gJ6qk5dT/IMG-7557.jpg" alt="รูปติดบัตรของคุณ"
         style="width: 150px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px; animation: scaleUp 1.5s ease;">
 
       <!-- ข้อมูลส่วนตัว -->
@@ -161,11 +164,11 @@
   <h1 style="text-align: center; color: #ff8800;">ทักษะของฉัน</h1>
   <div class="skills-grid">
     <div class="skill-item">
-      <img src="https://img5.pic.in.th/file/secure-sv1/-9_20241012150208.png" alt="HTML" title="HTML" class="skill-logo">
+      <img src="https://i.postimg.cc/PrqJWDvt/IMG-2170.png" alt="HTML" title="HTML" class="skill-logo">
       <p>HTML</p>
     </div>
     <div class="skill-item">
-      <img src="https://img5.pic.in.th/file/secure-sv1/-6_20241012135236ea0999d99b8f109d.png" title="CSS" class="skill-logo">
+      <img src="https://i.postimg.cc/cC2ptP8t/IMG-2174.png" title="CSS" class="skill-logo">
       <p>CSS</p>
     </div>
     <div class="skill-item">
@@ -185,15 +188,15 @@
       <p>ChatGPT</p>
     </div>
     <div class="skill-item">
-      <img src="https://img5.pic.in.th/file/secure-sv1/IMG_117877715f36950e6238.png" alt="GitHub" title="GitHub" class="skill-logo">
+      <img src="https://i.postimg.cc/JzDhgWQv/IMG-2171.png" alt="GitHub" title="GitHub" class="skill-logo">
       <p>GitHub</p>
     </div>
     <div class="skill-item">
-      <img src="https://img5.pic.in.th/file/secure-sv1/IMG_1179e0ea3086d24f5612.png" alt="Replit" title="Replit" class="skill-logo">
+      <img src="https://i.postimg.cc/15YtJzDD/IMG-2172.png" alt="Replit" title="Replit" class="skill-logo">
       <p>Replit</p>
     </div>
     <div class="skill-item">
-      <img src="https://img2.pic.in.th/pic/IMG_1177c7fc771b59a76b19.png" alt="Canva" title="Canva" class="skill-logo">
+      <img src="https://i.postimg.cc/BZz9zPwZ/IMG-2173.png" alt="Canva" title="Canva" class="skill-logo">
       <p>Canva</p>
       </div>
       <div class="skill-item">
@@ -201,7 +204,7 @@
         <p>CapCut</p>
     </div>
     <div class="skill-item">
-        <img src="https://img5.pic.in.th/file/secure-sv1/-16_20241030161155.png" alt="App inventor" title="App inventor" class="skill-logo">
+        <img src="https://i.postimg.cc/Qx58kqxZ/IMG-2175.png" alt="App inventor" title="App inventor" class="skill-logo">
         <p>App inventor</p>
     </div>
     <div class="skill-item">
@@ -226,16 +229,18 @@
             <div class="carousel">
               <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
               <div class="carousel-images">
-                <img src="https://img5.pic.in.th/file/secure-sv1/Present-Project.zip---1.png" alt="Image 1" class="carousel-image">
-                <img src="https://img5.pic.in.th/file/secure-sv1/Present-Project.zip---2.png" alt="Image 2" class="carousel-image">
-                <img src="https://img2.pic.in.th/pic/Present-Project.zip---5.png" alt="Image 3" class="carousel-image">
-                 <img src="https://img5.pic.in.th/file/secure-sv1/Present-Project.zip---6.png" alt="Image 4" class="carousel-image">
-                 <img src="https://img2.pic.in.th/pic/Present-Project.zip---10.png" alt="Image 5" class="carousel-image">
-                 <img src="https://img5.pic.in.th/file/secure-sv1/Present-Project.zip---12.png" alt="Image 6" class="carousel-image">
-                 <img src="https://img5.pic.in.th/file/secure-sv1/Present-Project.zip---13.png" alt="Image 7" class="carousel-image">
-                 <img src="https://img2.pic.in.th/pic/Present-Project.zip---14.png" alt="Image 8" class="carousel-image">
-                 <img src="https://img5.pic.in.th/file/secure-sv1/Present-Project.zip---15.png" alt="Image 11" alt="Image 9" class="carousel-image">
-                 <img src="https://img2.pic.in.th/pic/Present-Project.zip---16.png" alt="Image 10" class="carousel-image">
+                <img src="https://i.postimg.cc/RFzQhdFC/Present-Project-zip-1.png" alt="Image 1" class="carousel-image">
+                <img src="https://i.postimg.cc/zD7SDn15/Present-Project-zip-2.png" alt="Image 2" class="carousel-image">
+                <img src="https://i.postimg.cc/1XvpWZK4/Present-Project-zip-5.png" alt="Image 3" class="carousel-image">
+                 <img src="https://i.postimg.cc/ZRFPdNB8/Present-Project-zip-6.png" alt="Image 4" class="carousel-image">
+                 <img src="https://i.postimg.cc/rsV1Cpxv/Present-Project-zip-10.png
+" alt="Image 5" class="carousel-image">
+                 <img src="https://i.postimg.cc/Nj3RCDR8/Present-Project-zip-12.png
+" alt="Image 6" class="carousel-image">
+                 <img src="https://i.postimg.cc/L8YzVwg6/Present-Project-zip-13.png" alt="Image 7" class="carousel-image">
+                 <img src="https://i.postimg.cc/GhpP4HcD/Present-Project-zip-14.png" alt="Image 8" class="carousel-image">
+                 <img src="https://i.postimg.cc/cHZw0J9r/Present-Project-zip-15.png" alt="Image 11" alt="Image 9" class="carousel-image">
+                 <img src="https://i.postimg.cc/k5WK0Sy0/Present-Project-zip-16.png" alt="Image 10" class="carousel-image">
                  <img src="https://img2.pic.in.th/pic/Present-Project.zip---17.png" class="carousel-image">
               </div>
               <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
@@ -246,33 +251,31 @@
       <!-- <button class="view-video-btn" onclick="showImage('project1')">ดูภาพกิจกรรม</button>
     </div> -->
 
-    <div class="project">
-      <h3>โปรเจค 2: สอนการทำรายรับ-รายจ่าย  ‎‎⠀ บนแอปพลิเคชัน Excel</h3>
-      <p>โปรเจคนี้ทำขึ้นส่งคุณครูรายวิชาวิทยาการคอมพิวเตอร์ เป็นงานที่ต้องอัดวิดีโอทำสิ่งที่ตนเองสนใจอยากรีวิว ผมเองมีความรู้พื้นฐานการเขียนโค้ดคำสั่งใน Excel อยู่แล้วเลยทำโปรเจคนี้ขึ้นมาเพื่อสอนการทำรายรับ-รายจ่าย </p>
-      <p2>
-         <strong> กดปุ่มดูภาพกิจกรรมเพื่อชมวิดีโอ</strong>
-      </p2>
-      
-      <button class="view-video-btn" onclick="showVideo()">ดูภาพกิจกรรม</button>
-      <div id="videoContainer" style="display: none; max-width: 100%;">
-          <h4>วิดีโอกิจกรรม:</h4>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jw1kZc4iiYU" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
+        <div class="project">
+          <h3>โปรเจค 2: สอนการทำรายรับ-รายจ่าย  ‎‎⠀ บนแอปพลิเคชัน Excel</h3>
+          <p>โปรเจคนี้ทำขึ้นส่งคุณครูรายวิชาวิทยาการคอมพิวเตอร์ เป็นงานที่ต้องอัดวิดีโอทำสิ่งที่ตนเองสนใจอยากรีวิว ผมเองมีความรู้พื้นฐานการเขียนโค้ดคำสั่งใน Excel อยู่แล้วเลยทำโปรเจคนี้ขึ้นมาเพื่อสอนการทำรายรับ-รายจ่าย </p>
+          <p2>
+             <strong> กดปุ่มดูภาพกิจกรรมเพื่อชมวิดีโอ</strong>
+          </p2>
 
-    <script>
-    function showVideo() {
-      var container = document.getElementById('videoContainer');
-      container.style.display = 'block'; // แสดง div ที่มี iframe
-    }
-    </script>
-    
-    <script>
-    function showVideo() {
-      var container = document.getElementById('videoContainer');
-      container.style.display = 'block'; // แสดง div ที่มี iframe
-    }
-    </script>
+          <button class="view-video-btn" onclick="toggleVideo()">ดูภาพกิจกรรม</button>
+          <div id="videoContainer" style="display: none; max-width: 100%;">
+              <h4>วิดีโอกิจกรรม:</h4>
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jw1kZc4iiYU" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <script>
+        function toggleVideo() {
+          var container = document.getElementById('videoContainer');
+          // ตรวจสอบสถานะการแสดงผลของ videoContainer และสลับระหว่างแสดงและซ่อน
+          if (container.style.display === 'none') {
+            container.style.display = 'block'; // แสดง videoContainer
+          } else {
+            container.style.display = 'none'; // ซ่อน videoContainer
+          }
+        }
+        </script>
 
     <div class="project">
       <h3>โปรเจค 3: เว็บไซต์คำนวณเกรด GPA</h3>
@@ -359,7 +362,7 @@
         </div>
       </div>
       <div class="certificate-item">
-        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_03166feef9a879dda3cc.jpeg" alt="เกียรติบัตรที่ 2">
+        <img src="https://i.postimg.cc/Hn6xGYRD/IMG-2169.jpg" alt="เกียรติบัตรที่ 2">
         <div class="certificate-info">
           <h3>Learn Coding Basic with Book-Based Programming</h3>
           <p>วันที่: 1 ตุลาคม 2567</p>
@@ -418,7 +421,7 @@
         </div>
       </div>
       <div class="certificate-item">
-        <img src="https://img5.pic.in.th/file/secure-sv1/-144_20240704152314.jpeg" alt="เกียรติบัตรที่ 6">
+        <img src="https://i.postimg.cc/cJtXr6Bh/IMG-2179.jpg" alt="เกียรติบัตรที่ 6">
         <div class="certificate-info">
           <h3>รางวัลระดับเหรียญทอง</h3>
           <h3> การแข่งขันการแสดงทางวิทยาศาสตร์ (Science Show)</h3>
@@ -446,7 +449,7 @@
         </div>
       </div>
       <div class="certificate-item">
-        <img src="https://img5.pic.in.th/file/secure-sv1/IMG_86321051f1d43025c0cb.jpeg" alt="เกียรติบัตรที่ 8">
+        <img src="https://i.postimg.cc/XqbFNYsr/IMG-8632.jpg" alt="เกียรติบัตรที่ 8">
         <div class="certificate-info">
           <h3>เป็นสมาชิกคณะสภานักเรียนประจำปี 2566</h3>
           <p>วันที่: 13 มิถุนายน 2567</p>
@@ -469,7 +472,7 @@
         </div>
       </div>
       <div class="certificate-item">
-        <img src="https://img5.pic.in.th/file/secure-sv1/-145_20240704164202f432c7a28974bc0e.jpeg"
+        <img src="https://i.postimg.cc/6ptXVJmC/IMG-2178.jpg"
           alt="เกียรติบัตรที่ 10">
         <div class="certificate-info">
           <h3>โครงการส่งเสริมคุณธรรมจริยธรรม</h3>
@@ -498,6 +501,20 @@
           <button id="closeButton" style="margin-top: 15px; padding: 10px; background-color: #FFA500; color: white; border: none; border-radius: 5px;">ปิด</button>
         </div>
       </div>
+
+      <script>
+         const toggleButton = document.getElementById("darkModeToggle");
+
+         // Check stored mode in localStorage
+         const isDarkMode = localStorage.getItem("dark-mode") === "true";
+         if (isDarkMode) document.body.classList.add("dark-mode");
+
+         toggleButton.addEventListener("click", () => {
+             const isDark = document.body.classList.toggle("dark-mode");
+             localStorage.setItem("dark-mode", isDark);
+         });
+      </script>
+      
 
       <script>
          let currentSlide = 0;
@@ -622,17 +639,17 @@
           description = 'รายละเอียดเกี่ยวกับการเข้าร่วมการอบรมการพัฒนาเว็บไซต์';
           break;
         case 'certificate5':
-          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/Untitled-design6af7fdf8a133a67a.png';
+          imgSrc = 'https://i.postimg.cc/fWmp8qXC/Untitled-design.png';
           title = 'การประกวดแข่งขันโครงงาน กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี';
           description = 'ได้รับรางวัลระดับเหรียญทอง';
           break;
         case 'certificate6':
-          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/Untitled-designe5bc1586c9e7d7a2.png';
+          imgSrc = 'https://i.postimg.cc/Dy5CN9zr/Untitled-design.png';
           title = 'การแข่งขันการแสดงทางวิทยาศาสตร์ (Science Show)';
           description = 'ได้รับรางวัลระดับเหรียญทอง';
           break;
         case 'certificate7':
-          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/Untitled-designd16f92a42500db23.png';
+          imgSrc = 'https://i.postimg.cc/X7WhmKkb/Untitled-design.png';
           title = 'ภาพการอบรมค่าย MAE';
           description = 'การอบรมเชิงปฏิบัติการ ค่าย MAE ROBOTIC CAMP ครั้งที่ 3 หลักสูตร Programmable Logic Controller (PLC) เบื้องต้น';
           break;
@@ -642,7 +659,7 @@
           description = 'ได้เป็นคณะสภานักเรียนและคอยดูแลเกี่ยวกับเพจสภานักเรียน';
           break;
         case 'certificate9':
-          imgSrc = 'https://img5.pic.in.th/file/secure-sv1/IMG_1976bbad2cd90224daa1.jpeg';
+          imgSrc = 'https://i.postimg.cc/t4kH2SKw/IMG-2177.jpg';
           title = 'ภาพการเข้าอบรม To be number one';
           description = 'active learning to be number one 1️⃣';
           break;
@@ -667,9 +684,5 @@
   </script>
   
 
-</body>
-
-</html>
-
-</body>
+  </body>
 </html>

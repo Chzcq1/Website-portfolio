@@ -428,19 +428,10 @@ iframe {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* ลดความเข้มของเงา */
 }
 
-  .image-container {
-      margin-top: 15px;
-      padding: 10px;
-      background-color: #fff8dc;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-  }
-
-/* เพิ่มสไตล์สำหรับ carousel */
 .carousel {
   position: relative;
-  width: 80%;
-  max-width: 600px;
+  width: 100%;           /* ใช้ความกว้างเต็มของคอนเทนเนอร์ */
+  max-width: 100%;       /* ให้รองรับอุปกรณ์ที่ใหญ่ขึ้นได้ */
   margin: auto;
   overflow: hidden;
 }
@@ -451,10 +442,9 @@ iframe {
 }
 
 .carousel-image {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: auto;
+  width: 100%;           /* ให้รูปขยายเต็มพื้นที่ของ carousel */
+  flex: 0 0 100%;        /* ให้แต่ละรูปใช้พื้นที่ 100% ของ carousel */
+  object-fit: cover;     /* ปรับให้รูปขยายครอบคลุมพื้นที่ โดยไม่เสียสัดส่วน */
 }
 
 .carousel-btn {
@@ -471,9 +461,9 @@ iframe {
 }
 
 .carousel-btn.prev {
-  left: 0;
+  left: 10px;           /* ขยับปุ่มให้ห่างขอบเล็กน้อย */
 }
 
 .carousel-btn.next {
-  right: 0;
+  right: 10px;          /* ขยับปุ่มให้ห่างขอบเล็กน้อย */
 }

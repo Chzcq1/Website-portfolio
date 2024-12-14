@@ -14,3 +14,13 @@ function closeModal() {
 }
 
 document.getElementById('closeButton').onclick = closeModal;
+
+const toggleButton = document.getElementById("toggle-dark-mode");
+const isDarkMode = localStorage.getItem("dark-mode") === "true";
+
+if (isDarkMode) document.body.classList.add("dark-mode");
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
+});
